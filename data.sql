@@ -31,7 +31,6 @@ CREATE TABLE interview_statements (
     FOREIGN KEY (member_id) REFERENCES group_members(member_id)
 );
 
--- Insert sample data into the group_members table
 INSERT INTO group_members (name, height, hair_color, eye_color, age, alibi, location_during_incident) VALUES
 ('John Doe', '180cm', 'black', 'brown', 30, 'At home', 'Home'),
 ('Bob Brown', '175cm', 'black', 'brown', 35, 'At a friend''s house', 'Friend''s House'),
@@ -44,14 +43,12 @@ INSERT INTO group_members (name, height, hair_color, eye_color, age, alibi, loca
 ('Sophia Martinez', '163cm', 'brown', 'hazel', 24, 'At the library', 'Library'),
 ('Olivia Taylor', '170cm', 'black', 'brown', 29, 'At a family gathering', 'Family Home');
 
--- Insert sample data into the detectives table
 INSERT INTO detectives (name, years_of_experience, year_of_birth, success_rate, specialty) VALUES
 ('Detective Smith', 10, 1980, 95.5, 'Homicide'),
 ('Detective Johnson', 8, 1985, 92.3, 'Fraud'),
 ('Detective Williams', 12, 1978, 97.1, 'Cybercrime');
 
 
--- Insert sample data into the interview_statements table
 INSERT INTO interview_statements (detective_id, member_id, statement, date_time) VALUES
 (1, 1, 'I was at home all evening.', '2023-10-01 18:30:00'),
 (2, 2, 'I was working late at the office.', '2023-10-01 19:00:00'),
